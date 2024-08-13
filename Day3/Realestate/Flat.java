@@ -18,5 +18,8 @@ public class Flat extends Property{
         System.out.println("floor :"+floor);        
         System.out.println("Deposit :"+deposit);
     }
+    public double calculateMaintainence(){
+        return 1.0;
+    }
     
 }

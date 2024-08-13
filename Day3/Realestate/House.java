@@ -19,4 +19,7 @@ public class House extends Property{
         System.out.println("parking :"+isParking);        
         System.out.println("Rooms: "+bhk + " BHK");
     }
+    public double calculateMaintainence(){
+        return 1.5;
+    }
 }

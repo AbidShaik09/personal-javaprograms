@@ -5,7 +5,8 @@ public class Program {
     public static void main(String [] args){
         int c;
         Scanner sc = new Scanner(System.in);
-        ArrayList<House> house = new ArrayList<House>();
+        Property properties[] = new Property[5];
+        int pointer = 0;
 
         do{
 
@@ -13,25 +14,33 @@ public class Program {
             c= sc.nextInt();
             switch (c) {
                 case 1:
+                    
                     System.out.println("Choose: 1.Flat  2.House  3.Back" );
                     int n= sc.nextInt();
                     switch (n) {
                         case 1:
-                            Flat f= new Flat();
-                            f.accept();
+                            properties[pointer]=new Flat();
                             break;
                         case 2:
-                            House h = new House();
-                            h.accept();
+                            properties[pointer]=new House();
                             break;
                         default:
                             break;
                     }
+                    properties[pointer].accept();
+                    pointer++;
 
                     break;
-            
+                case 2:
+                    System.out.println("--------------------------");
+                    for(int y = 0;y<pointer;y++){
+                            properties[y].show();
+                            System.out.println("--------------------------");
+                            
+                    }
+                    break;
                 default:
-                    return;
+                    System.exit(0);
             }
         } while(true);
     }
